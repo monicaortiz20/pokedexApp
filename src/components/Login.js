@@ -20,7 +20,7 @@ function Login() {
   }
 
   return (
-    <div>
+    <div className="d-flex flex-column justify-content-center align-items-center">
       <h2>Iniciar sesión</h2>
       <button onClick={handleGoogleLogin}>Iniciar sesión con google</button>
       {error && <p> error</p>}

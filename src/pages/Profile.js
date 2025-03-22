@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { IoMdStar } from "react-icons/io";
 
 function Profile() {
   const [user, setUser] = useState(null);
@@ -30,6 +31,10 @@ function Profile() {
       <h1>Perfil</h1>
       <img src={user.photo} alt="Foto de perfil" />
       <p>nombre: {user.name}</p>
+      <p>Ciudad: Johto</p>
+      <p>
+        Estrenador: <IoMdStar /> <IoMdStar /> <IoMdStar />
+      </p>
     </div>
   );
 }
