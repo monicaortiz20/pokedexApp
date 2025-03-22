@@ -9,15 +9,15 @@ function Header() {
   return (
     <div>
       <header>
-        <div class="px-3 py-2 bg-dark text-white">
-          <div class="container">
-            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <div className="px-3 py-2 bg-dark text-white">
+          <div className="container">
+            <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
               <a
                 href="/"
-                class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none"
+                className="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none"
               >
                 <svg
-                  class="bi me-2"
+                  className="bi me-2"
                   width="40"
                   height="32"
                   role="img"
@@ -27,15 +27,15 @@ function Header() {
                 </svg>
               </a>
 
-              <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+              <ul className="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
                 <li>
-                  <a href="#" class="nav-link text-secondary">
+                  <a href="#" className="nav-link text-secondary">
                     <FaHeart />
                     Favorites
                   </a>
                 </li>
                 <li>
-                  <a href="/profile" class="nav-link text-white">
+                  <a href="/profile" className="nav-link text-white">
                     Profile
                     <FaUserLarge />
                     <TbPokeball />

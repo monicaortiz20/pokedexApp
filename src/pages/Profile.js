@@ -19,6 +19,7 @@ function Profile() {
         setUser(null);
       }
     });
+    //Limpia la suscripción al desmontar el componente
     return () => unsubscribe();
   }, []);
 
