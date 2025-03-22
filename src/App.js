@@ -1,7 +1,6 @@
 import "./App.css";
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Header from "./components/Header";
 import Login from "./components/Login";
 import PokemonList from "./pages/PokemonList";
 import ProtectedRoute from "./components/ProtectedRoute";
