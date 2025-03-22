@@ -13,7 +13,7 @@ function Login() {
   async function handleGoogleLogin() {
     try {
       await signInWithPopup(auth, googleProvider);
-      navigate("/pokemonList");
+      navigate("/pokedex");
     } catch (error) {
       setError(error.message);
     }

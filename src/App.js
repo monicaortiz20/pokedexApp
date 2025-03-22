@@ -2,7 +2,7 @@ import "./App.css";
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Login from "./components/Login";
-import PokemonList from "./pages/PokemonList";
+import Pokedex from "./pages/Pokedex";
 import Profile from "./pages/Profile";
 import ProtectedRoute from "./components/ProtectedRoute";
 
@@ -13,10 +13,10 @@ function App() {
         <Route path="/" element={<Login />} />
         {/* ruta protegida */}
         <Route
-          path="/pokemonList"
+          path="/pokedex"
           element={
             <ProtectedRoute>
-              <PokemonList />
+              <Pokedex />
             </ProtectedRoute>
           }
         />
