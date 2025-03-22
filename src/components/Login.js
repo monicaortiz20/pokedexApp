@@ -1,17 +1,19 @@
 import React, { useState } from "react";
 import { auth } from "../firebaseConfig";
 import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 //import "../styles/Login.css";
 
 function Login() {
   const [error, setError] = useState("");
-  const googleProvider = GoogleAuthProvider();
+  const googleProvider = new GoogleAuthProvider();
+  const navigate = useNavigate();
 
   //Función para iniciar sesión con google:
   async function handleGoogleLogin() {
     try {
       await signInWithPopup(auth, googleProvider);
-      alert("Inicio con Google correcto.");
+      navigate("/pokemonList");
     } catch (error) {
       setError(error.message);
     }
@@ -21,7 +23,7 @@ function Login() {
     <div>
       <h2>Iniciar sesión</h2>
       <button onClick={handleGoogleLogin}>Iniciar sesión con google</button>
-      {/* {error && <p></p>} */}
+      {error && <p> error</p>}
     </div>
   );
 }
