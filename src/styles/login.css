@@ -1,0 +1,145 @@
+.login-container {
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+  width: 100vw; /* Ocupa todo el ancho de la pantalla */
+  position: relative;
+  overflow: hidden;
+}
+.background-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  width: inherit;
+  z-index: -1;
+}
+
+.content {
+  position: relative;
+  top: 17%;
+  left: 13%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 450px;
+  width: 280px;
+  color: white;
+  text-align: center;
+  z-index: 1;
+  border-radius: 50%;
+}
+.bradius-30 {
+  border-radius: 30px;
+}
+.pokeballContainer {
+  display: flex;
+  position: relative;
+  bottom: 4.7rem;
+  width: 60%;
+  height: 50%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 0 25px 25px;
+  border: 0px inset red;
+  box-shadow: 1px 0 3px red, -1px 0 3px red, 0 1px 3px red, 0 0 0px transparent;
+}
+.pontBox {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  width: inherit;
+  position: relative;
+  bottom: 1rem;
+  justify-content: space-between;
+}
+.pont {
+  width: 7px;
+  height: 7px;
+  background-color: #21252e;
+  border-radius: 50%;
+}
+
+.pokeballLogin {
+  height: 5rem;
+  width: 5rem;
+  stroke-width: 1;
+  color: #21252e;
+  background-color: #21252e;
+  border-radius: 50%;
+  padding: 2px;
+  path {
+    fill: red;
+  }
+}
+.hline {
+  width: 6.5rem;
+  height: 3px;
+  background-color: #21252e;
+  position: relative;
+  top: 2.6rem;
+  border-radius: 15%;
+}
+.vline {
+  width: 1.5rem;
+  height: 3px;
+  background-color: #21252e;
+  position: relative;
+  left: 2.5rem;
+  border-radius: 15%;
+  transform: rotate(90deg);
+}
+.point {
+  width: 7px;
+  height: 7px;
+  background-color: #21252e;
+  border-radius: 50%;
+  position: relative;
+  left: 3.03rem;
+  top: 0.4rem;
+}
+.triangle {
+  border-left: 0px solid transparent;
+  border-bottom: 0px solid transparent;
+  border-right: 0px solid red;
+  border-top: 0px solid red;
+  width: 40px;
+  height: 40px;
+  border-radius: 2px;
+  transform: rotate(135deg);
+  box-shadow: 1px 0 7px red, 1px 0 0px red, 0px -1px 0px red,
+    0px 0px 0px transparent;
+  position: relative;
+  top: 2.6rem;
+}
+
+h2 {
+  font-weight: 200 !important;
+}
+
+.button {
+  font-weight: 200 !important;
+}
+.login-google-button {
+  background-color: #ffffff80;
+  border-radius: 25px;
+  padding: 5px 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: none !important;
+  color: lightgray;
+  font-size: 12px;
+  gap: 0.5rem;
+}
+
+.login-google-button:hover {
+  background-color: #f0f0f0;
+  color: gray;
+}
+
+.google-icon {
+  width: 20px;
+  height: 20px;
+}
