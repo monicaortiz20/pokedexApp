@@ -1,44 +1,30 @@
 import React from "react";
+import "../styles/header.css";
 import { FaUserLarge } from "react-icons/fa6";
 import { TbPokeball } from "react-icons/tb";
 import { FaHeart } from "react-icons/fa";
-
-//import "../styles/header.css";
+import pokeballHeader from "../images/pokeball-header.png";
 
 function Header() {
   return (
     <div>
       <header>
         <div className="px-3 py-2 bg-dark text-white">
-          <div className="container">
-            <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-              <a
-                href="/"
-                className="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none"
-              >
-                <svg
-                  className="bi me-2"
-                  width="40"
-                  height="32"
-                  role="img"
-                  aria-label="Bootstrap"
-                >
-                  {/* <use xlink:href="#bootstrap"></use> */}
-                </svg>
-              </a>
-
+          <div className="d-flex align-items-center justify-content-between">
+            <a href="/pokedex" className="text-decoration-none col-3">
+              <img src={pokeballHeader} className="w-50" id="pokeballHeader" />
+            </a>
+            <div>
               <ul className="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
                 <li>
-                  <a href="#" className="nav-link text-secondary">
+                  <a href="#" className="nav-link text-secondary pt-2 p-0">
                     <FaHeart />
-                    Favorites
                   </a>
                 </li>
                 <li>
                   <a href="/profile" className="nav-link text-white">
-                    Profile
                     <FaUserLarge />
-                    <TbPokeball />
+                    <TbPokeball className="tbpokeball" />
                     {/* <TbPokeballOff /> Para eliminar pokemon del listado del cinturón */}
                   </a>
                 </li>

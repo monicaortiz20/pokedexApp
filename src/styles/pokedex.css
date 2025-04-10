@@ -1,0 +1,10 @@
+.bgSearched {
+  background-image: url("../images/bg-greypokedex.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100%;
+}
+.mainContentPokedex {
+  height: 100%;
+}

@@ -13,7 +13,8 @@ function Login() {
   const navigate = useNavigate();
 
   //Función para iniciar sesión con google:
-  async function handleGoogleLogin() {
+  async function handleGoogleLogin(e) {
+    e.preventDefault();
     try {
       await signInWithPopup(auth, googleProvider);
       navigate("/pokedex");

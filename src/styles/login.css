@@ -1,8 +1,9 @@
 .login-container {
   height: 100vh; /* Ocupa toda la altura de la pantalla */
   width: 100vw; /* Ocupa todo el ancho de la pantalla */
-  position: relative;
-  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .background-img {
   position: absolute;
@@ -16,14 +17,12 @@
 
 .content {
   position: relative;
-  top: 17%;
-  left: 13%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 450px;
-  width: 280px;
+  height: 550px;
+  width: 300px;
   color: white;
   text-align: center;
   z-index: 1;
@@ -35,7 +34,7 @@
 .pokeballContainer {
   display: flex;
   position: relative;
-  bottom: 4.7rem;
+  bottom: 6.3rem;
   width: 60%;
   height: 50%;
   flex-direction: column;
@@ -104,14 +103,14 @@
   border-bottom: 0px solid transparent;
   border-right: 0px solid red;
   border-top: 0px solid red;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border-radius: 2px;
   transform: rotate(135deg);
   box-shadow: 1px 0 7px red, 1px 0 0px red, 0px -1px 0px red,
     0px 0px 0px transparent;
   position: relative;
-  top: 2.6rem;
+  top: 4rem;
 }
 
 h2 {

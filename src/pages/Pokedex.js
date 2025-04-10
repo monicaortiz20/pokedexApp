@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Header from "../components/Header";
 import PokemonCard from "../components/PokemonCard";
 import Search from "../components/Search";
+import "../styles/pokedex.css";
 
 function Pokedex() {
   const [searchPokemon, setSearchPokemon] = useState("");
@@ -38,21 +39,23 @@ function Pokedex() {
   }
 
   return (
-    <div>
+    <div className="mainContentPokedex">
       <Header />
-      <Search
-        handleSearch={handleSearch}
-        handleSearchSubmit={handleSearchSubmit}
-      />
-      {loading && <p>Loading...</p>}
-      {error && <p style={{ color: "red" }}>{error}</p>}
-      {pokemon && (
-        <PokemonCard
-          name={pokemon.name}
-          sprite={pokemon.sprites?.other.home.front_default}
-          details={pokemon} // Pasamos todos los detalles del Pokémon
+      <div className="bgSearched">
+        <Search
+          handleSearch={handleSearch}
+          handleSearchSubmit={handleSearchSubmit}
         />
-      )}
+        {loading && <p>Loading...</p>}
+        {error && <p style={{ color: "red" }}>{error}</p>}
+        {pokemon && (
+          <PokemonCard
+            name={pokemon.name}
+            sprite={pokemon.sprites?.other.home.front_default}
+            details={pokemon} // Pasamos todos los detalles del Pokémon
+          />
+        )}
+      </div>
     </div>
   );
 }
