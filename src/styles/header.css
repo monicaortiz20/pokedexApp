@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#pokeballHeader {
+  width: 50px !important;
+}
+a svg:nth-child(2) {
+  margin-bottom: 7px;
+  width: 0.8em;
+}
