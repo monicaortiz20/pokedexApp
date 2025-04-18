@@ -1,4 +1,6 @@
 import React from "react";
+import "../styles/search.css";
+import searchBall from "../images/searchBall.png";
 
 function Search({ handleSearch, handleSearchSubmit }) {
   return (
@@ -6,9 +8,11 @@ function Search({ handleSearch, handleSearchSubmit }) {
       <input
         type="text"
         placeholder="Search Pokémon by name"
-        onChange={handleSearch} // handleSearch debe ser una función
+        onChange={handleSearch}
       />
-      <button type="submit">Search</button>
+      <button type="submit">
+        <img src={searchBall} />
+      </button>
     </form>
   );
 }

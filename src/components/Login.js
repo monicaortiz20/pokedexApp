@@ -44,7 +44,7 @@ function Login() {
         </div>
 
         <h2>Login</h2>
-        <form>
+        <form className="formLogin">
           <button className="login-google-button" onClick={handleGoogleLogin}>
             <img
               src={googleIcon}

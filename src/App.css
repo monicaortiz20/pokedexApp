@@ -1,14 +1,13 @@
+html,
 body {
   background-color: #000000;
   color: #ffffff;
   font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  height: 100%;
   margin: 0;
+  overflow: hidden;
 }
 #root {
   width: 100%;
-  height: inherit;
+  height: 100%;
 }

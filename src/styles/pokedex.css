@@ -1,10 +1,49 @@
 .bgSearched {
-  background-image: url("../images/bg-greypokedex.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
   height: 100%;
 }
+
 .mainContentPokedex {
   height: 100%;
+}
+
+.pokedexContainer {
+  background-color: grey;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
+}
+.cardTop {
+  background-color: darkred !important;
+  border-bottom: 2px solid black;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cardBottom {
+  background-color: darkred !important;
+  border-top: 2px solid black;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.containerSearchAnimation {
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.iconPokemonDiv {
+  border-radius: 100%;
+  /* background: grey;
+  background: linear-gradient(145deg, #f0f0f0, #cacaca);
+  box-shadow: inset 13px 13px 25px darkred, inset -13px -13px 25px black;*/
+  box-shadow: 13px 13px 25px darkred, -13px -13px 25px black;
+  position: absolute;
+  width: 250px;
+  height: 250px;
 }

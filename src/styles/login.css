@@ -12,7 +12,6 @@
   transform: translate(-50%, -50%);
   height: 100%;
   width: inherit;
-  z-index: -1;
 }
 
 .content {
@@ -141,4 +140,7 @@ h2 {
 .google-icon {
   width: 20px;
   height: 20px;
+}
+.formLogin {
+  z-index: inherit;
 }
