@@ -1,4 +1,8 @@
 import React, { useState } from "react";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+import "../styles/pokemonCard.css";
 
 function PokemonCard({ name, sprite, details }) {
   const [showDetails, setShowDetails] = useState(false);
@@ -11,70 +15,63 @@ function PokemonCard({ name, sprite, details }) {
     setShowDetails(false);
   };
 
+  const sliderSettings = {
+    dots: true,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+
   return (
     <div>
-      <div onClick={handleCardClick} style={{ cursor: "pointer" }}>
-        <h3>{name}</h3>
+      <div onClick={handleCardClick} className="pokeCard">
         {sprite && <img src={sprite} alt={name} />}
+        <h3>{name}</h3>
       </div>
 
       {showDetails && (
-        <div
-          style={{
-            position: "fixed",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-            backgroundColor: "rgba(0, 0, 0, 0.8)",
-            color: "white",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-            transition: "opacity 0.5s ease-in-out",
-            zIndex: 1000,
-          }}
-        >
-          <button
-            onClick={handleCloseDetails}
-            style={{
-              position: "absolute",
-              top: "20px",
-              right: "20px",
-              backgroundColor: "red",
-              color: "white",
-              border: "none",
-              borderRadius: "5px",
-              padding: "10px",
-              cursor: "pointer",
-            }}
-          >
+        <div className="pokeDetailsCard">
+          <button onClick={handleCloseDetails} className="btnCard">
             Close
           </button>
-          <h2>{details.name}</h2>
-          <img src={details.sprites.front_default} alt={details.name} />
-          <p>
-            <strong>Base Experience:</strong> {details.base_experience}
-          </p>
-          <p>
-            <strong>Abilities:</strong>{" "}
-            {details.abilities
-              .map((ability) => ability.ability.name)
-              .join(", ")}
-          </p>
-          <p>
-            <strong>Types:</strong>{" "}
-            {details.types.map((type) => type.type.name).join(", ")}
-          </p>
-          <p>
-            <strong>Moves:</strong>{" "}
-            {details.moves
-              .slice(0, 5)
-              .map((move) => move.move.name)
-              .join(", ")}{" "}
-            (showing first 5)
-          </p>
+          <Slider {...sliderSettings}>
+            {/* Primera tarjeta: Base Experience y Abilities */}
+            <div className="carouselCard">
+              <h2>{details.name}</h2>
+              <p>
+                <strong>Base Experience:</strong> {details.base_experience}
+              </p>
+              <p>
+                <strong>Abilities:</strong>{" "}
+                {details.abilities
+                  .map((ability) => ability.ability.name)
+                  .join(", ")}
+              </p>
+            </div>
+
+            {/* Segunda tarjeta: Types */}
+            <div className="carouselCard">
+              <h2>{details.name}</h2>
+              <p>
+                <strong>Types:</strong>{" "}
+                {details.types.map((type) => type.type.name).join(", ")}
+              </p>
+            </div>
+
+            {/* Tercera tarjeta: Moves */}
+            <div className="carouselCard">
+              <h2>{details.name}</h2>
+              <p>
+                <strong>Moves:</strong>{" "}
+                {details.moves
+                  .slice(0, 5)
+                  .map((move) => move.move.name)
+                  .join(", ")}{" "}
+                (showing first 5)
+              </p>
+            </div>
+          </Slider>
         </div>
       )}
     </div>

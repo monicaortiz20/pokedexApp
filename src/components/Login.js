@@ -25,9 +25,9 @@ function Login() {
 
   return (
     <div className="login-container">
-      <img src={background} className="background-img" />
+      <img src={background} className="background-img" alt="" />
       <div className="content">
-        <img src={background} className="background-img bradius-30" />
+        <img src={background} className="background-img bradius-30" alt="" />
         <div className="pokeballContainer">
           <div className="pontBox">
             <div className="pont"></div>

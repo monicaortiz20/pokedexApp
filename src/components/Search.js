@@ -1,13 +1,13 @@
 import React from "react";
 import "../styles/search.css";
-import searchBall from "../images/searchBall.png";
+import searchBall from "../images/searchIcon.png";
 
 function Search({ handleSearch, handleSearchSubmit }) {
   return (
-    <form onSubmit={handleSearchSubmit}>
+    <form className="searchForm" onSubmit={handleSearchSubmit}>
       <input
         type="text"
-        placeholder="Search Pokémon by name"
+        placeholder="Search Pokemon by name"
         onChange={handleSearch}
       />
       <button type="submit">
