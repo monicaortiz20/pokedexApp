@@ -49,7 +49,7 @@
   justify-content: center;
 }
 .pokemonCardContainer {
-  width: 80%;
+  width: 100%;
   overflow: hidden;
   position: absolute;
   top: 40%;
