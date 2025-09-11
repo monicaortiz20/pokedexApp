@@ -121,7 +121,9 @@ function Pokedex() {
         </animated.div>
         <animated.div
           style={{ ...searchAnimation }}
-          className="containerSearchAnimation"
+          className={`containerSearchAnimation${
+            seeResult ? " search-active" : ""
+          }`}
         >
           <Search
             handleSearch={handleSearch}

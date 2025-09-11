@@ -15,7 +15,7 @@ function Header() {
               <img src={pokeballHeader} className="w-50" id="pokeballHeader" />
             </a>
             <div>
-              <ul className="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+              <ul className="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small list">
                 <li>
                   <a href="#" className="nav-link text-secondary pt-2 p-0">
                     <FaHeart />

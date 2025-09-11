@@ -11,3 +11,13 @@ a svg:nth-child(2) {
   margin-bottom: 7px;
   width: 0.8em;
 }
+.list {
+  a.text-secondary {
+    svg:hover {
+      cursor: pointer;
+      path {
+        fill: darkred;
+      }
+    }
+  }
+}

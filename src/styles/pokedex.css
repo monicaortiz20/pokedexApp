@@ -56,3 +56,11 @@
   left: 50%;
   height: 70%;
 }
+.search-active {
+  .searchForm {
+    height: 4rem;
+    input {
+      font-size: 40px;
+    }
+  }
+}
