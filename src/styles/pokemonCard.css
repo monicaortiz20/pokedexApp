@@ -3,16 +3,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
   height: 100%;
-  top: 15%;
+  top: 25%;
 }
 
 .pokeCard {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
   z-index: 1; /* Asegura que el contenido de pokeCard esté encima */
 }
 .pokeCard div {
@@ -27,7 +26,7 @@
 }
 
 .pokeCard img {
-  width: 850%;
+  width: 100%;
   max-width: 300px; /* Ajusta el tamaño máximo de la imagen */
   height: auto;
 }
@@ -53,8 +52,8 @@ input[type="radio"] {
 .containerData {
   width: 100%;
   max-width: 800px;
-  max-height: 600px;
-  height: 100%;
+  max-height: 250px;
+  height: 50%;
   transform-style: preserve-3d;
   display: flex;
   justify-content: center;
@@ -96,4 +95,30 @@ input[type="radio"] {
   img {
     box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
   }
+}
+
+.evolution-row {
+  display: flex;
+  gap: 0px;
+  align-items: center;
+  position: relative;
+}
+
+.evolution-img-wrapper {
+  position: relative;
+  width: 110px;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.evolution-circle-bg {
+  /* El círculo de fondo */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.evolution-img-wrapper img {
+  /* La imagen por encima del círculo */
+  /* El tamaño y posición se ajusta inline en el componente */
 }

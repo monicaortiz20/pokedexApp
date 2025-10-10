@@ -54,7 +54,7 @@
   position: absolute;
   top: 40%;
   left: 50%;
-  height: 70%;
+  height: 100%;
 }
 .search-active {
   .searchForm {
@@ -63,4 +63,16 @@
       font-size: 40px;
     }
   }
+}
+
+.evolutionsContainer {
+  h4 {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  position: sticky;
+  bottom: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
